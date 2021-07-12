@@ -1,5 +1,4 @@
-# Doctocat Template
-
+# Turing Docs
 
 ## Getting Started
 
