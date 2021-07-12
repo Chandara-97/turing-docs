@@ -1,0 +1,83 @@
+diff --git a/node_modules/@primer/gatsby-theme-doctocat/src/components/header.js b/node_modules/@primer/gatsby-theme-doctocat/src/components/header.js
+index 32b4e46..6c15029 100644
+--- a/node_modules/@primer/gatsby-theme-doctocat/src/components/header.js
++++ b/node_modules/@primer/gatsby-theme-doctocat/src/components/header.js
+@@ -30,43 +30,10 @@ function Header({isSearchEnabled}) {
+         bg="black"
+       >
+         <Flex alignItems="center">
+-          <Link
+-            href="https://primer.style"
+-            color="blue.4"
+-            mr={3}
+-            lineHeight="condensedUltra"
+-          >
+-            <StyledOcticon icon={MarkGithubIcon} size="medium" />
+-          </Link>
+-          <Link
+-            display={[
+-              // We only hide "Primer" on small viewports if a shortName is defined.
+-              siteMetadata.shortName ? 'none' : 'inline-block',
+-              null,
+-              null,
+-              'inline-block',
+-            ]}
+-            href="https://primer.style"
+-            color="blue.4"
+-            fontFamily="mono"
+-          >
+-            Primer
+-          </Link>
+-
+           {siteMetadata.shortName ? (
+-            <>
+-              <Text
+-                display={['none', null, null, 'inline-block']}
+-                color="blue.4"
+-                fontFamily="mono"
+-                mx={2}
+-              >
+-                /
+-              </Text>
+-              <Link as={GatsbyLink} to="/" color="blue.4" fontFamily="mono">
++            <Link as={GatsbyLink} to="/" color="blue.4" fontFamily="mono">
+                 {siteMetadata.shortName}
+-              </Link>
+-            </>
++            </Link>
+           ) : null}
+ 
+           {isSearchEnabled ? (
+diff --git a/node_modules/@primer/gatsby-theme-doctocat/src/primer-nav.yml b/node_modules/@primer/gatsby-theme-doctocat/src/primer-nav.yml
+index 6b8f9fc..3b0d60a 100644
+--- a/node_modules/@primer/gatsby-theme-doctocat/src/primer-nav.yml
++++ b/node_modules/@primer/gatsby-theme-doctocat/src/primer-nav.yml
+@@ -1,26 +1,2 @@
+-- title: What's new
+-  url: https://primer.style/news
+-- title: Design
+-  children:
+-    - title: Interface guidelines
+-      url: https://primer.style/design
+-    - title: Octicons
+-      url: https://primer.style/octicons
+-    - title: Presentations
+-      url: https://primer.style/presentations
+-    - title: Command line
+-      url: https://primer.style/cli
+-    - title: Mobile
+-      url: https://primer.style/mobile
+-    - title: Desktop
+-      url: https://primer.style/desktop
+-- title: Development
+-  children:
+-    - title: CSS
+-      url: https://primer.style/css
+-    - title: React
+-      url: https://primer.style/components
+-    - title: ViewComponents
+-      url: https://primer.style/view-components
+-- title: About
+-  url: https://primer.style/team
++- title: Homepage
++  url: https://hstr.cc/turing

@@ -1,7 +1,15 @@
-- title: Page 1
-  url: /page-1
-- title: Example
-  url: /example
+- title: Authentication
+  url: /auth
   children:
-    - title: Page 2
-      url: /example/page-2
+    - title: Employees
+      url: /auth/employees
+    - title: Customers
+      url: /auth/customers
+- title: Cinemas
+  url: /cinemas
+- title: Theatres
+  url: /theatres
+- title: Movies
+  url: /movies
+- title: Screenings
+  url: /screenings

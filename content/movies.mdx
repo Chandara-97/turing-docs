@@ -1,0 +1,55 @@
+---
+title: Movies
+---
+
+## The movie object
+
+```json
+{
+  "title": "Luca",
+  "releaseDate": "2020-01-01",
+  "synopsis" : ,
+  "trailerUrl": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
+}
+```
+
+## Create a movie
+
+```http
+POST /movies
+```
+
+## Retrieve a movie
+
+```http
+GET /movies/:id
+```
+
+## Update a movie
+
+```http
+PATCH /movies/:id
+```
+
+## Delete a movie
+
+```http
+DELETE /movies/:id
+```
+
+## List all movies
+
+```http
+GET /movies
+```
+
+**Response**
+
+```json
+[
+  {
+    "name": "Luca",
+    "releaseDate": "2020-01-01"
+  }
+]
+```

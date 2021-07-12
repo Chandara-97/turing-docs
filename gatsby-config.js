@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Doctocat Template',
-    shortName: 'Template',
-    description: 'My site description',
+    title: 'Turing Docs',
+    shortName: 'Turing Docs',
+    description:
+      'The documentation of all software systems that power Turing Cinemas.',
   },
   plugins: ['@primer/gatsby-theme-doctocat'],
 }
