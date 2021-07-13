@@ -7,32 +7,9 @@ title: Movies
 ```json
 {
   "title": "Luca",
-  "releaseDate": "2021-06-17",
-  "synopsis": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
-  "trailer": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
-  "runtime": 95,
-  "poster": "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
-  "backdrop": "/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
-  "directors": [
-    {
-      "id": 1,
-      "firstName": "Enrico",
-      "lastName": "Casarosa"
-    }
-  ],
-  "cast": [
-    {
-      "id": 2,
-      "firstName": "Emma",
-      "lastName": "Berman"
-    },
-    {
-      "id": 3,
-      "firstName": "Jacob",
-      "lastName": "Tremblay"
-    }
-  ],
-  "status": 1
+  "releaseDate": "2020-01-01",
+  "synopsis" : ,
+  "trailerUrl": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
 }
 ```
 
@@ -42,94 +19,10 @@ title: Movies
 POST /movies
 ```
 
-#### Parameters
-
-| Name        | Type         | Required |
-| ----------- | ------------ | -------- |
-| title       | string       | Yes      |
-| releaseDate | date         | Yes      |
-| synopsis    | string       | Yes      |
-| trailer     | string       | No       |
-| runtime     | number       | Yes      |
-| poster      | string       | Yes      |
-| backdrop    | string       | Yes      |
-| directorIds | number array | Yes      |
-| castIds     | number array | Yes      |
-
-#### Response
-
-Returns the created movie object.
-
-```json
-{
-  "title": "Tenet",
-  "releaseDate": "2020-08-22",
-  "synopsis": "Armed with only one word - Tenet - and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
-  "trailer": "5dfbb4e565686e00158e85d3",
-  "runtime": 150,
-  "poster": "/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
-  "backdrop": "/wzJRB4MKi3yK138bJyuL9nx47y6.jpg",
-  "directors": [
-    {
-      "id": 4,
-      "firstName": "Christopher",
-      "lastName": "Nolan"
-    }
-  ],
-  "cast": [
-    {
-      "id": 5,
-      "firstName": "Robert",
-      "lastName": "Pattinson"
-    },
-    {
-      "id": 6,
-      "firstName": "Elizabeth",
-      "lastName": "Debicki"
-    }
-  ],
-  "status": 1
-}
-```
-
 ## Retrieve a movie
 
 ```http
 GET /movies/:id
-```
-
-#### Response
-
-```json
-{
-  "title": "Luca",
-  "releaseDate": "2021-06-17",
-  "synopsis": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
-  "trailer": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
-  "runtime": 95,
-  "poster": "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
-  "backdrop": "/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
-  "directors": [
-    {
-      "id": 1,
-      "firstName": "Enrico",
-      "lastName": "Casarosa"
-    }
-  ],
-  "cast": [
-    {
-      "id": 2,
-      "firstName": "Emma",
-      "lastName": "Berman"
-    },
-    {
-      "id": 3,
-      "firstName": "Jacob",
-      "lastName": "Tremblay"
-    }
-  ],
-  "status": 1
-}
 ```
 
 ## Update a movie
@@ -138,70 +31,10 @@ GET /movies/:id
 PATCH /movies/:id
 ```
 
-Updates the movie by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
-
-#### Parameters
-
-| Name        | Type         |
-| ----------- | ------------ |
-| title       | string       |
-| releaseDate | date         |
-| synopsis    | string       |
-| trailer     | string       |
-| runtime     | number       |
-| poster      | string       |
-| backdrop    | string       |
-| directorIds | number array |
-| castIds     | number array |
-
-#### Response
-
-Returns the updated movie object.
-
-```json
-{
-  "title": "Luca",
-  "releaseDate": "2021-06-17",
-  "synopsis": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
-  "trailer": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
-  "runtime": 95,
-  "poster": "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
-  "backdrop": "/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
-  "directors": [
-    {
-      "id": 1,
-      "firstName": "Enrico",
-      "lastName": "Casarosa"
-    }
-  ],
-  "cast": [
-    {
-      "id": 2,
-      "firstName": "Emma",
-      "lastName": "Berman"
-    },
-    {
-      "id": 3,
-      "firstName": "Jacob",
-      "lastName": "Tremblay"
-    }
-  ],
-  "status": 1
-}
-```
-
 ## Delete a movie
 
 ```http
 DELETE /movies/:id
-```
-
-#### Response
-
-```json
-{
-  "success": true
-}
 ```
 
 ## List all movies
@@ -210,40 +43,13 @@ DELETE /movies/:id
 GET /movies
 ```
 
-#### Response
+**Response**
 
 ```json
 [
   {
-    "title": "Luca",
-    "releaseDate": "2021-06-17",
-    "synopsis": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
-    "trailer": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
-    "runtime": 95,
-    "poster": "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
-    "backdrop": "/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
-    "directors": [
-      {
-        "id": 1,
-        "firstName": "Enrico",
-        "lastName": "Casarosa"
-      }
-    ],
-    "cast": [
-      {
-        "id": 2,
-        "firstName": "Emma",
-        "lastName": "Berman"
-      },
-      {
-        "id": 3,
-        "firstName": "Jacob",
-        "lastName": "Tremblay"
-      }
-    ],
-    "status": 1
-  },
-  {...},
-  {...}
+    "name": "Luca",
+    "releaseDate": "2020-01-01"
+  }
 ]
 ```

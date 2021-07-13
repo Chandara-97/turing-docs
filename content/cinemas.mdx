@@ -3,3 +3,326 @@ title: Cinemas
 ---
 
 ## The cinema object
+```json
+{
+	data:
+    [
+		{
+			"id" : 1,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1,
+			"theater" :[
+
+                {
+                    "id": 1,
+                    "theater": "Hall 1",
+                    "row_num": 30,
+                    "col_num": 15,
+                    "screening": [
+                        { 
+                            "id": 1,
+                            "date": "Moday 12 July 2021",
+                            "price": 3($),
+                            "start_time": 14:23,
+                        },
+                        { 
+                            "id": 2,
+                            "date": "Moday 12 July 2021",
+                            "price": 3($),
+                            "start_time": 16:23,
+                        },
+                    ]
+                    "seat": [
+                        {
+                            "id": 1,
+                            "name": "A0",
+                            "row": 0,
+                            "col": 0,
+                            "seat_type": {
+                                "id": 1,
+                                "name": "Gold",
+                                "price": 7.5($),
+                            }
+
+                        },
+                        {
+                            "id": 2,
+                            "name": "A1",
+                            "row": 0,
+                            "col": 1,
+                            "seat_type": {
+                                "id": 1,
+                                "name": "Gold",
+                                "price": 7.5($),
+                            }
+                        },
+                    ],
+                },
+				{
+                    "id": 2,
+                    "theater": "Hall 2",
+                    "row_num": 30,
+                    "col_num": 15,
+                    "screening": [
+                        { 
+                            "id": 1,
+                            "date": "Moday 12 July 2021",
+                            "price": 3($),
+                            "start_time": 14:23,
+                        },
+                        { 
+                            "id": 2,
+                            "date": "Moday 12 July 2021",
+                            "price": 3($),
+                            "start_time": 16:23,
+                        },
+                    ],
+                    "seat": [
+                        {
+                            "id": 1,
+                            "name": "A0",
+                            "row": 0,
+                            "col": 0,
+                            "seat_type": {
+                                "id": 1,
+                                "name": "Gold",
+                                "price": 7.5($),
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "name": "A1",
+                            "row": 0,
+                            "col": 1,
+                            "seat_type": {
+                                "id": 1,
+                                "name": "Gold",
+                                "price": 7.5($),
+                            }
+                        },
+                    ],
+                },						
+			],
+		},	
+    ],
+}
+```
+
+## Frontend
+
+## View All Cinemas
+
+```json
+**GET**: /cinema
+```
+
+### Response
+
+```json
+data
+[
+		{
+			"id" : 1,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1
+		},
+		{
+			"id" : 2,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1
+		},
+		{
+			"id" : 3,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1
+		},
+			,{}...,{}
+]
+```
+
+## View Single Cinema
+
+```json
+**GET**: /cinema/{$name}
+```
+
+### Response
+
+```json
+{
+	data:
+    [
+		{
+			"id" : 1,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1,
+			"theater" :[
+
+                {
+                    "id": 1,
+                    "theater": "Hall 1",
+                    "row_num": 30,
+                    "col_num": 15,
+                    "screening": [
+                        { 
+                            "id": 1,
+                            "date": "Moday 12 July 2021",
+                            "price": 3($),
+                            "start_time": 14:23,
+                            "movie":{
+                                "id": 1,
+                                "title": "Luca",
+                                "releaseDate": "2021-06-17",
+                                "synopsis": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
+                                "trailer": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
+                                "runtime": 95,
+                                "poster": "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
+                                "backdrop": "/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
+                            }
+
+                        },
+                        { 
+                            "id": 2,
+                            "date": "Moday 12 July 2021",
+                            "price": 3($),
+                            "start_time": 16:23,
+                            "movie":{
+                                "id": 1,
+                                "title": "Luca",
+                                "releaseDate": "2021-06-17",
+                                "synopsis": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
+                                "trailer": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
+                                "runtime": 95,
+                                "poster": "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
+                                "backdrop": "/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
+                            }
+                        },
+                    ]
+                },
+				{
+                    "id": 2,
+                    "theater": "Hall 2",
+                    "row_num": 30,
+                    "col_num": 15,
+                    "screening": [
+                        { 
+                            "id": 1,
+                            "date": "Moday 12 July 2021",
+                            "price": 3($),
+                            "start_time": 14:23,
+                            "movie":{
+                                "id": 1,
+                                "title": "Luca",
+                                "releaseDate": "2021-06-17",
+                                "synopsis": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
+                                "trailer": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
+                                "runtime": 95,
+                                "poster": "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
+                                "backdrop": "/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
+                            }
+                        },
+                        { 
+                            "id": 2,
+                            "date": "Moday 12 July 2021",
+                            "price": 3($),
+                            "start_time": 16:23,
+                            "movie":{
+                                "id": 1,
+                                "title": "Luca",
+                                "releaseDate": "2021-06-17",
+                                "synopsis": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
+                                "trailer": "https://www.youtube.com/watch?v=mYfJxlgR2jw",
+                                "runtime": 95,
+                                "poster": "/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
+                                "backdrop": "/620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
+                            }
+                        },
+                    ],
+                },						
+			],
+		},	
+    ],
+}
+```
+
+## Backend
+
+## View All Cinemas
+
+```json
+**GET**: /admin/cinema
+```
+
+### Response
+
+```json
+data
+[
+		{
+			"id" : 1,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1
+		},
+		{
+			"id" : 2,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1
+		},
+		{
+			"id" : 3,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1
+		},
+			,{}...,{}
+]
+```
+
+## Create Cinema
+
+```json
+**POST**: /admin/cinena/create
+```
+
+### Request
+
+```json
+
+		{
+			"id" : 1,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1
+		}
+```
+
+### Response
+
+```json
+
+		{
+			"id" : 1,
+			"name" : "Turing Cinema TK",
+			"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+			"status": 1
+		}
+```
+
+## Update Cinema
+
+```json
+**PUT**: /admin/cinena/upadate/{id}
+```
+
+## Delete Cinema
+
+```json
+**DELET**: /admin/cinena/upadate/{id}
+```

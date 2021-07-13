@@ -1,3 +1,97 @@
 ---
 title: Authentication
 ---
+## Admin/Employees
+
+### Sign In
+
+`POST`
+
+```json
+**Post** : user/admin/signin
+```
+
+### Request
+
+```json
+{
+	"email" : "XXXX@Admin.com",
+	"password" : "XXXXXXXXXX"
+}
+```
+
+### Response
+
+```json
+{
+	"token" : "XXXXXXXXX",
+	"email" : "XXXX@Admin.com",
+	"password" : "XXXXXXXXXX"
+}
+```
+
+## Customers
+
+### Sign In
+
+`POST`
+
+```json
+**Post** : user/signin
+```
+
+### Request
+
+```json
+{
+	"email" : "user@gmail.com",
+	"password" : "XXXXXXXXXX"
+}
+```
+
+### Response
+
+```json
+{
+	"token" : "XXXXXXXXX",
+	"email" : "user@gmail.com",
+	"password" : "XXXXXXXXXX"
+}
+```
+
+### Sign Up
+
+`POST`
+
+```json
+**Post** : user/signup
+```
+
+### Request
+
+```json
+{
+	"fname" : "chandara",
+	"lname" : "leav",
+	"username" : "chandara97",
+	"email" : "chandara@gmail.com",
+	"password" : "XXXXXXXXXX"
+	"verify_password" : "XXXXXXXXXX",
+	"phone" : "099876534",
+}
+```
+
+### Response
+
+```json
+{
+	"token" : "XXXXXXXXX",
+	"fname" : "chandara",
+	"lname" : "leav",
+	"username" : "chandara97",
+	"email" : "chandara@gmail.com",
+	"password" : "XXXXXXXXXX"
+	"verify_password" : "XXXXXXXXXX",
+	"phone" : "099876534",
+}
+```

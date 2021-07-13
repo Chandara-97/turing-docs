@@ -3,3 +3,144 @@ title: 'Theatres'
 ---
 
 ## The theatre object
+
+## Theaters
+
+`GET` `/api/theaters` | Get All Theaters 
+
+```json
+{
+  "data": [
+		{
+		    "id": "1",
+				"theater_name" : "Phnom Penh",
+				"row_num" : "Lengend PP",
+		 		"col_num" : "true"
+		},
+		"relationships" : {
+			"cinemas" : {
+						"data" : [
+										"id" : "1",
+										"name" : "Lengend TK"
+									]
+				}, 
+	{
+		    "id": "1",
+				"theater_name" : "Phnom Penh",
+				"row_num" : "Lengend PP",
+		 		"col_num" : "true"
+		},
+		"relationships" : {
+			"cinemas" : {
+						"data" : [
+										"id" : "1",
+										"name" : "Lengend TK"
+									]
+				}
+				]
+		{
+		   
+```
+
+`GET` `/api/theater/1` | Get Single Theaters 
+
+```json
+{
+  "data": [
+		{
+		    "id": "1",
+				"theater_name" : "Phnom Penh",
+				"row_num" : "Lengend PP",
+		 		"col_num" : "true"
+		},
+		"relationships" : {
+			"cinemas" : {
+						"data" : [
+										"id" : "1",
+										"name" : "Lengend TK"
+									]
+				}
+		]  
+}
+```
+
+`POST` `/api/theaters` | Create Theater 
+
+```json
+{
+  "data": [
+		{
+		    "id": "1",
+				"theater_name" : "Phnom Penh",
+				"row_num" : "Lengend PP",
+		 		"col_num" : "true"
+		},
+		"relationships" : {
+			"cinemas" : {
+						"data" : [
+										"id" : "1",
+									]
+				}
+		]  
+}
+```
+
+`PATCH` `/api/theaters` | Update Theater 
+
+```json
+{
+  "data": [
+		{
+		    "id": "1",
+				"theater_name" : "Phnom Penh",
+				"row_num" : "Lengend PP",
+		 		"col_num" : "true"
+		},
+		"relationships" : {
+			"cinemas" : {
+						"data" : [
+										"id" : "1",
+										"name" : "Legend TK"
+									]
+				}
+		]  
+}
+```
+
+`DELETE` `/api/theaters/1` | Delete Theater 
+
+```json
+{
+  "data": [
+		{
+		    "id": "1",
+				"theater_name" : "Phnom Penh",
+				"row_num" : "Lengend PP",
+		 		"col_num" : "true"
+		},
+		"relationships" : {
+			"cinemas" : {
+						"data" : [
+										"id" : "1",
+										"name" : "Lengend TK"
+									]
+				}, 
+	{
+		    "id": "1",
+				"theater_name" : "Phnom Penh",
+				"row_num" : "Lengend PP",
+		 		"col_num" : "true"
+		},
+		"relationships" : {
+			"cinemas" : {
+						"data" : [
+										"id" : "1",
+										"name" : "Lengend TK"
+									]
+				}
+				]
+		{
+		   
+```
+
+## Concessions

@@ -1,3 +1,348 @@
 ---
 title: Employees
 ---
+# Backend
+
+## View all employees
+
+```json
+**GET**: /admin/all-users
+```
+
+## Response
+
+```json
+data:[
+    {
+        "id": 1,
+        "fname" : "chandara",
+        "lname" : "leav",  
+        "username" : "chandara97",
+        "email" : "chandara@gmail.com",
+        "phone" : "099876534",
+        "Role": [
+            {
+                "id":1,
+                "name": "admin",
+                "defualt_role": "admin",
+                "desciption": "control admin panel",
+                "status": true,
+            },
+            {
+                "id":2,
+                "name": "accountant",
+                "defualt_role": "admin",
+                "desciption": "control admin panel",
+                "status": true,
+            },
+        ],
+        "cinema": [
+            {
+							"id" : 1,
+							"name" : "Turing Cinema TK",
+							"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+							"status": 1,
+            },
+            {
+				 			"id" : 1,
+							"name" : "Turing Cinema TK",
+							"Location" : "National Road 6A, Kthor, Prek Leap ChroyChangvar, Phnom Penh",
+							"status": 1,
+            },
+        ],
+    },
+        
+]
+```
+
+## Update a employees information
+
+```json
+**PUT**: /admin/all-users/update/{id}
+```
+
+## Request
+
+```json
+data:[
+    {
+        "id": 1,
+        "fname" : "chandara",
+        "lname" : "leav",  
+        "username" : "chandara97",
+        "email" : "chandara@gmail.com",
+        "phone" : "099876534",
+        "Role": [
+            {
+                "id":1,
+                "name": "admin",
+                "defualt_role": "admin",
+                "desciption": "control admin panel",
+                "status": true,
+            },
+            {
+                "id":2,
+                "name": "accountant",
+                "defualt_role": "admin",
+                "desciption": "control admin panel",
+                "status": true,
+            },
+        ],
+    },
+        
+]
+```
+
+## Delete a employee
+
+```json
+**DELETE**: /admin/all-users/delete/{id}
+```
+
+## Response
+
+```json
+{
+"success": true
+}
+```
+
+## View Role Users
+
+```json
+**GET**: /admin/all-users/roles
+```
+
+## Response
+
+```json
+{
+    data: [
+        {
+            "id":1,
+            "name": "admin",
+            "defualt_role": "admin",
+            "desciption": "control admin panel",
+            "status": true,
+            "role_permission": [
+
+                {
+                    "id": 1,
+                    "cread": true,
+                    "read": true,
+                    "update": true,
+                    "delete": true,
+                    "permission": [
+                        {
+                            "id": 1,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                        {
+                            "id": 2,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                    ],
+                },
+                {
+                    "id": 2,
+                    "cread": true,
+                    "read": true,
+                    "update": false,
+                    "delete": false,
+                    "permission": [
+                        {
+                            "id": 1,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                        {
+                            "id": 2,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                    ],
+                },
+            ]
+
+        },
+        {
+            "id":2,
+            "name": "admin",
+            "defualt_role": "admin",
+            "desciption": "control admin panel",
+            "status": true,
+            "role_permission": [
+
+                {
+                    "id": 1,
+                    "cread": true,
+                    "read": true,
+                    "update": true,
+                    "delete": true,
+                    "permission": [
+                        {
+                            "id": 1,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                        {
+                            "id": 2,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                    ],
+                },
+                {
+                    "id": 2,
+                    "cread": true,
+                    "read": true,
+                    "update": false,
+                    "delete": false,
+                    "permission": [
+                        {
+                            "id": 1,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                        {
+                            "id": 2,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                    ],
+                },
+            ]
+
+        },
+    ]
+}
+```
+
+## Update Role Users
+
+```json
+**PUT**: /admin/all-users/roles/update/{id}
+```
+
+## Request
+
+```json
+{
+    data: [
+        {
+            "id":1,
+            "name": "admin",
+            "defualt_role": "admin",
+            "desciption": "control admin panel",
+            "status": true,
+            "role_permission": [
+
+                {
+                    "id": 1,
+                    "cread": true,
+                    "read": true,
+                    "update": true,
+                    "delete": true,
+                    "permission": [
+                        {
+                            "id": 1,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                        {
+                            "id": 2,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                    ],
+                },
+                {
+                    "id": 2,
+                    "cread": true,
+                    "read": true,
+                    "update": false,
+                    "delete": false,
+                    "permission": [
+                        {
+                            "id": 1,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                        {
+                            "id": 2,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                    ],
+                },
+            ]
+
+        },
+        {
+            "id":2,
+            "name": "admin",
+            "defualt_role": "admin",
+            "desciption": "control admin panel",
+            "status": true,
+            "role_permission": [
+
+                {
+                    "id": 1,
+                    "cread": true,
+                    "read": true,
+                    "update": true,
+                    "delete": true,
+                    "permission": [
+                        {
+                            "id": 1,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                        {
+                            "id": 2,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                    ],
+                },
+                {
+                    "id": 2,
+                    "cread": true,
+                    "read": true,
+                    "update": false,
+                    "delete": false,
+                    "permission": [
+                        {
+                            "id": 1,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                        {
+                            "id": 2,
+                            "name": "អត់ដឹងដាក់អី advance ពេក",
+                            "category":"អត់ដឹងដាក់អី advance ពេក",
+                        },
+                    ],
+                },
+            ]
+
+        },
+    ]
+}
+```
+
+## DELTE Role Users
+
+```json
+**DELETE**: /admin/all-users/roles/delete/{id}
+```
+
+## Response
+
+```json
+{
+	"success": true
+}
+```
